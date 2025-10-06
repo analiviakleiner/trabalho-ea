@@ -8,35 +8,42 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background-color: #121212; /* Fundo escuro para contraste */
-    color: #f5f5f5;
+    background-color: #121212; /* Fundo preto para contraste */
+    color: #fff;
+    background-image: radial-gradient(circle at 25% 25%, #4b0082, #111, #000);
     text-align: center;
-    background-image: radial-gradient(circle at center, #1a1a1a, #121212);
 }
 
-/* Header estilizado */
+/* Header */
 header {
-    background-color: #1a1a1a;
-    padding: 50px;
+    background-color: #1c1c1c; /* Preto suave */
+    padding: 60px 20px;
     text-align: center;
-    border-bottom: 5px solid #ff6f00;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    border-bottom: 5px solid #ff0099; /* Rosa chamativo */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
 }
 
 header h1 {
-    font-size: 4em;
-    color: #ff6f00;
+    font-size: 4.5em;
+    color: #ff0099;
     text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    font-weight: 900;
+    letter-spacing: 4px;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease;
 }
 
+header h1:hover {
+    transform: scale(1.05);
+}
+
+/* Texto de introdução */
 .intro-text {
     font-size: 1.8em;
-    color: #fff;
+    color: #ffffff;
     margin-top: 15px;
     opacity: 0.85;
+    font-weight: 300;
     transition: opacity 0.3s ease;
 }
 
@@ -46,78 +53,85 @@ header h1 {
 
 /* Conteúdo principal */
 .content {
-    padding: 30px;
+    padding: 40px 20px;
     max-width: 1200px;
     margin: 30px auto;
-    text-align: center;
-    animation: fadeIn 1s ease-in-out;
+    animation: fadeIn 1.2s ease-in-out;
 }
 
+/* Títulos */
 h2 {
-    color: #ff6f00;
-    font-size: 3em;
+    color: #00bcd4; /* Azul ciano */
+    font-size: 3.2em;
     margin-bottom: 25px;
     font-weight: 600;
     text-transform: capitalize;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3);
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
 }
 
-/* Lista estilizada */
+h2:hover {
+    color: #ff0099;
+}
+
+/* Estilo para listas */
 ul {
     list-style-type: none;
     padding: 0;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 ul li {
-    margin: 15px 0;
+    margin: 20px 0;
     font-size: 1.8em;
     font-weight: 500;
-    transition: transform 0.3s ease, color 0.3s;
+    color: #ddd;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 ul li:hover {
     transform: translateX(10px);
-    color: #ff6f00;
+    color: #ff0099; /* Rosa */
 }
 
 /* Links */
 a {
-    color: #ff6f00;
+    color: #ff0099;
     text-decoration: none;
     font-weight: 700;
     font-size: 1.8em;
-    padding: 5px 10px;
-    border-radius: 5px;
-    transition: color 0.3s, background-color 0.3s;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: rgba(255, 0, 153, 0.1);
+    transition: color 0.3s, background-color 0.3s, transform 0.3s;
 }
 
 a:hover {
-    color: #ffd700;
-    background-color: rgba(255, 111, 0, 0.1);
-    box-shadow: 0 0 10px rgba(255, 111, 0, 0.5);
+    color: #fff;
+    background-color: #ff0099;
+    box-shadow: 0 0 15px rgba(255, 0, 153, 0.6);
+    transform: translateY(-3px);
 }
 
-/* Estilo para footer */
+/* Footer */
 footer {
-    background-color: #1a1a1a;
-    color: #ff6f00;
+    background-color: #1c1c1c;
+    color: #ff0099;
     text-align: center;
-    padding: 20px;
-    margin-top: 30px;
-    font-size: 1.3em;
-    border-top: 3px solid #ff6f00;
-    transition: background-color 0.3s;
-}
-
-footer:hover {
-    background-color: #333;
-}
-
-/* Galeria de planetas */
-#galeria {
+    padding: 20px 0;
     margin-top: 40px;
-    animation: fadeIn 1.2s ease-in-out;
+    font-size: 1.3em;
+    border-top: 3px solid #ff0099;
+}
+
+footer p {
+    font-size: 1.2em;
+}
+
+/* Galeria de imagens */
+#galeria {
+    margin-top: 50px;
 }
 
 .planet-gallery {
@@ -132,30 +146,32 @@ footer:hover {
     width: 320px;
     height: auto;
     border-radius: 15px;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .planet-gallery img:hover {
     transform: scale(1.1);
-    box-shadow: 0 15px 30px rgba(255, 111, 0, 0.7);
+    box-shadow: 0 20px 50px rgba(0, 188, 212, 0.8);
 }
 
-/* Estilo para o sumário (botões de navegação) */
+/* Botões de navegação (Sumário) */
 #sumario ul li a {
     display: inline-block;
-    padding: 12px 35px;
-    background-color: #ff6f00;
-    border-radius: 25px;
-    transition: background-color 0.3s, transform 0.3s;
+    padding: 14px 36px;
+    background-color: #00bcd4; /* Azul ciano */
+    border-radius: 30px;
+    transition: background-color 0.3s, transform 0.3s ease;
     font-size: 1.8em;
-    font-weight: 600;
-    margin: 10px;
+    font-weight: 700;
+    margin: 12px;
+    color: #fff;
+    text-decoration: none;
 }
 
 #sumario ul li a:hover {
-    background-color: #ffd700;
-    color: #1a1a1a;
+    background-color: #ff0099;
+    color: #fff;
     transform: translateY(-5px);
 }
 
@@ -170,3 +186,22 @@ footer:hover {
         transform: translateY(0);
     }
 }
+
+/* Efeitos de rotação e scale para o conteúdo */
+@keyframes rotateScale {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        transform: rotate(360deg) scale(1.05);
+    }
+    100% {
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+/* Efeitos interativos adicionais */
+.animated-content {
+    animation: rotateScale 4s infinite;
+}
+
